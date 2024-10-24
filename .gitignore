@@ -48,3 +48,23 @@ conditionals/target/debug/incremental/conditionals-00fcez2g4gppj/s-h13ndqmk67-1f
 conditionals/target/debug/incremental/conditionals-00fcez2g4gppj/s-h13ndqmk67-1f20xrl-bnhi6wih87do7ut5mzaep7ldx/e31mx00crbwyizy4efe6j1e0x.o
 conditionals/target/debug/incremental/conditionals-00fcez2g4gppj/s-h13ndqmk67-1f20xrl-bnhi6wih87do7ut5mzaep7ldx/query-cache.bin
 conditionals/target/debug/incremental/conditionals-00fcez2g4gppj/s-h13ndqmk67-1f20xrl-bnhi6wih87do7ut5mzaep7ldx/work-products.bin
+# Ignore the target directory, which contains compiled binaries and other build artifacts
+/target/
+
+# Ignore Cargo.lock if you're building a library
+# Cargo.lock
+
+# Ignore the .cargo directory, which contains registry sources and other metadata
+/.cargo/
+
+# Ignore the .rustc_info.json file
+/target/.rustc_info.json
+
+# Ignore the CACHEDIR.TAG file
+/target/CACHEDIR.TAG
+
+# Ignore the debug directory and its contents
+/target/debug/
+
+# Ignore build artifacts
+/target/debug/build/
