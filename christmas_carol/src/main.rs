@@ -3,25 +3,12 @@ fn main() {
 }
 
 fn sing(start_day: u8) {
-    // given a start day Print the remaining verses of 12 days of christmas  
     for day in start_day as usize..=12 {
         chorus(day);
-        match day {
-            1 => println!("{}", format!("{}\n", VERSES[0])),
-            2 => for _ in 1..day {for i in(0..day).rev() {println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {format!("{}", VERSES[i])}); }println!();},
-            3 => for _ in 2..day {for i in(0..day).rev() {println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {format!("{}", VERSES[i])}); }println!();},
-            4 => for _ in 3..day {for i in(0..day).rev() {println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {format!("{}", VERSES[i])}); }println!();},
-            5 => for _ in 4..day {for i in(0..day).rev() {println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {format!("{}", VERSES[i])}); }println!();},
-            6 => for _ in 5..day {for i in(0..day).rev() {println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {format!("{}", VERSES[i])}); }println!();},
-            7 => for _ in 6..day {for i in(0..day).rev() {println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {format!("{}", VERSES[i])}); }println!();},
-            8 => for _ in 7..day {for i in(0..day).rev() {println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {format!("{}", VERSES[i])}); }println!();},
-            9 => for _ in 8..day {for i in(0..day).rev() {println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {format!("{}", VERSES[i])}); }println!();},
-            10 => for _ in 9..day {for i in(0..day).rev() {println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {format!("{}",VERSES[i])}); }println!();},
-            11 => for _ in 10..day {for i in(0..day).rev() {println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {format!("{}",VERSES[i])});}println!();},
-            12 => for _ in 11..day {for i in(0..day).rev() {println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {format!("{}",VERSES[i])});}println!();},
-            _ => sing(1),
-
-            };
+        for i in (0..day).rev() {
+            println!("{}", if i == 0 {format!("And {}", VERSES[i]) } else {VERSES[i].to_string() });
+    }
+        println!();
     }
 }
 
